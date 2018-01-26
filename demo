@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <meta name="author" content="MMK Jony">
+    <meta name="description" content="An ultra-lightweight and super easy to use plugin for parallax scrolling effect">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+
+    <style media="screen">
+        body {
+            background: #cdcdcd;
+            min-height: 3000px;
+            padding-top: 600px;
+            padding-left: 200px;
+        }
+
+        .demo-block {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: red;
+            content: " ";
+        }
+
+        .regular {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="demo-block" data-enllax-ratio=".1" data-enllax-type="foreground" data-enllax-direction="vertical" >Animated</div>
+    <div data-enllax-ratio="0.5" class="regular">Regular</div>
+
+
+
+    <!-- foreground -->
+    <img src="path/to/image" data-enllax-ratio=".1" data-enllax-type="foreground" data-enllax-direction="vertical" />
+
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Script for smooth scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script>
+
+    <script src="jquery.enllax.min.js"></script>
+    <script>
+        (function($) {
+
+            //Plugin activation
+            $(window).enllax();
+
+            //            $('#some-id').enllax();
+
+            //            $('selector').enllax({
+            //                type: 'background', // 'foreground'
+            //                ratio: 0.5,
+            //                direction: 'vertical' // 'horizontal'
+            //            });
+
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>
